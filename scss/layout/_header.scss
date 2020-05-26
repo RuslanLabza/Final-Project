@@ -1,0 +1,150 @@
+.header {
+	padding: 30px 0;
+	background-color: $black;
+	position: relative;
+
+	.container {
+		@include media('>=tablet') {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	.header-holder {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include media('>=tablet') {
+			display: block;
+		}
+	}
+
+	.logo {
+		@include media('>=tablet') {
+			margin-right: 132px;
+		}
+	}
+
+	nav {
+		@include media('>=tablet') {
+			flex-grow: 1;
+		}
+	}
+}
+
+.menu {
+	z-index: 99;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	left: 0;
+	transform: scale(.9);
+	transition: opacity .3s ease-in-out, visibility .3s ease-in-out, transform .3s ease-in-out;
+	@extend %listreset;
+
+	@include media('>=tablet') {
+		opacity: 1;
+		visibility: visible;
+		display: flex;
+		position: static;
+		transform: scale(1);
+		justify-content: space-between;
+	}
+
+	.mobile-menu-active & {
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+	}
+
+	a {
+		color: darken($gray, 13.33);
+		text-decoration: none;
+		text-transform: uppercase;
+		display: block;
+		background-color: rgba($black, .85);
+		padding: 10px;
+		font-size: 13px;
+		font-weight: bold;
+		transition: color .3s ease-in-out;
+
+		@include media('>=tablet') {
+			padding: 0;
+			margin-left: 10px;
+		}
+
+		&:hover {
+			color: $white;
+		}
+	}
+
+	li {
+		&.active {
+			a {
+				color: $white;
+			}
+		}
+	}
+}
+
+.menu-opener {
+	display: inline-block;
+	vertical-align: top;
+	width: 40px;
+	height: 40px;
+	position: relative;
+	border: 2px solid $white;
+	border-radius: 3px;
+
+	@include media('>=tablet') {
+		display: none;
+	}
+
+	span,
+	&::after,
+	&::before {
+		background: $white;
+		border-radius: 4px;
+		position: absolute;
+		top: 50%;
+		left: 25%;
+		right: 25%;
+		height: 4px;
+		margin-top: -2px;
+		transition: all .3s linear;
+	}
+
+	&::before {
+		content:'';
+		top:30%;
+	}
+
+	&::after {
+		content:'';
+		top:70%;
+	}
+}
+
+.mobile-menu-active {
+	.menu-opener {
+		&::after,
+		&::before {
+			transform: rotate(45deg);
+			top: 50%;
+			left: 15%;
+			right: 15%;
+		}
+
+		&::after {
+			transform:rotate(-45deg);
+		}
+
+		span {
+			opacity: 0;
+		}
+	}
+}

@@ -1,0 +1,143 @@
+.footer {
+	background-color: $black;
+
+	.row {
+	padding: 82px 0 74px;
+
+		@include media ('>=tablet') {
+			display: flex;
+			margin: 0 -10px;
+		}
+	}
+
+	.block {
+		margin-bottom: 20px;
+
+		@include media ('>=tablet') {
+			width: calc(25% - 20px);
+			margin: 0 10px;
+		}
+	}
+
+	.links {
+		@extend %listreset;
+		font-size: 14px;
+		line-height: 1.57;
+		font-weight: normal;
+	}
+
+	.tags {
+		@extend %listreset;
+		font-size: 13px;
+		line-height: 1.69;
+		font-weight: normal;
+		display: flex;
+		flex-wrap: wrap;
+
+		li {
+			display: inline-block;
+			background-color: darken(desaturate(adjust-hue($dark-gray, -220), 8.57), .39);
+			padding: 4.5px 10.5px;
+			margin-right: 5px;
+			margin-bottom: 5px;
+			transition: background-color .3s ease-in-out;
+
+			&:hover {
+				background-color: darken($gray, 30%);
+			}
+
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+
+	.form-control {
+		display: block;
+		width: 100%;
+		border: 2px solid transparent;
+		border-radius: 5px;
+		padding: 9.5px 55px 9.5px 18px;
+		line-height: 1;
+
+		@include placeholder {
+			color: $gray;
+			font-size: 14px;
+			line-height: 1.57;
+			font-weight: normal;
+		}
+
+		&:focus {
+			border-color: $green;
+			outline: none;
+		}
+	}
+
+	.search-form {
+		position: relative;
+	}
+
+	h2 {
+		font-weight: bold;
+		line-height: normal;
+		color: $white;
+		font-size: 14px;
+		text-transform: uppercase;
+		margin-bottom: 19.5px;
+	}
+
+	a {
+		color: $gray;
+	}
+
+	p {
+		font-size: 14px;
+		line-height: 1.57;
+		font-weight: normal;
+		color: $gray;
+		margin-bottom: 36px;
+	}
+
+	.bottom {
+		text-align: center;
+		padding: 30px 0;
+		border-top: 5px solid darken(desaturate(adjust-hue($dark-gray, -220), 8.57), 0.39);
+
+		@include media ('>=tablet') {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	.copyright {
+		font-size: 12px;
+		font-weight: bold;
+		line-height: normal;
+		color: darken($gray, 20.00);
+		text-transform: uppercase;
+
+		strong {
+			color: $gray;
+		}
+	}
+
+	.social-networks {
+		@extend %listreset;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		a {
+			font-size: 14px;
+			text-decoration: none;
+			color: rgba($white, .45);
+			margin-left: 10px;
+			transition: color .3s ease-in-out;
+
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+}
