@@ -1,4 +1,4 @@
-# Thunder WordPress Theme
+# Thunder Theme Website
 
 ## Table of Contents
 - [About the Project](#about-the-project)
@@ -11,7 +11,7 @@
 
 ## About the Project
 
-Thunder is a modern, responsive WordPress theme designed to provide a clean and easy-to-use interface for websites. It is built to help users showcase their portfolios, services, and blog posts effectively.
+Thunder theme is a modern, responsive website designed to provide a clean and easy-to-use interface for websites. It is built to help users showcase their portfolios, services, and blog posts effectively.
 
 ## Features
 
