@@ -38,7 +38,7 @@ To get a local copy up and running, follow these simple steps:
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/RuslanLabza/vanilla-js-calendar-app.git
+   git clone https://github.com/RuslanLabza/vanilla-js-calendar-app.git //TODO: change this
    ```
 2. Install NPM packages
    ```sh
@@ -63,4 +63,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Ruslan Labza - [LinkedIn](https://www.linkedin.com/in/ruslanlabza)
 
-Project Link: [https://github.com/RuslanLabza/vanilla-js-calendar-app](https://github.com/RuslanLabza/vanilla-js-calendar-app)
+Project Link: [https://github.com/RuslanLabza/vanilla-js-calendar-app](https://github.com/RuslanLabza/vanilla-js-calendar-app)  //TODO: change this
